@@ -1,0 +1,9 @@
+What it does...
+It runs any executable (with complete command line) available in the system from current working dir (command must be in Path or in job's workspace directory or subdirectory).
+Automatic conversion of file separator is done according to the executing operating system.
+Variable style is converted according to the executing operating system. E.g. $JOBPARAM1 is converted to %JOBPARAM1% in the command if the executing operating system is Windows.
+Constraints:
+
+the current working directory of the command execution is always the job's workspace root.
+./ must not be included in command line (use the configuration switch provided to specify that command is in current working dir or subdir).
+Examples:
